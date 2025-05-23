@@ -1,0 +1,216 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #192f52;
+    color:#fff;
+}
+#header{  /*cuz id*/
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/tempBackground.jpg);
+    background-size: cover;
+    background-position: center ;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex; /*to have side by side*/
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: flat;
+}
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px; /*10 pixels top and  buttom, 20 left and right*/
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration:none ;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{ /*line under menu items*/
+    content: '';
+    width: 0;
+    height: 3px;
+    background:#0084ff ;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text span{
+    color: #0084ff;
+}
+p {
+    margin-bottom: 20px; /* Adjust as needed */
+    line-height: 1.6; /* Optional: improves readability */
+}
+/* ---------------howIwork----------------------*/
+.howIwork-col-1 img {
+    width: 100%; /* Adjust width as needed */
+    border-radius: 15px; /* Optional: adds rounded corners */
+}
+#howIwork {
+    padding: 80px 0;
+    color: #fff;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.howIwork-col-1{
+    flex-basis:  35%;
+}
+.howIwork-col-2{
+    flex-basis:  60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight:600 ;
+    color: aquamarine;
+}
+a {
+    color: #f7c3f7; /* or any color you want */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7fffd4; /* optional: change on hover */
+}
+/*--------------cases------------------------*/
+#cases{
+    padding: 30px 0;
+}
+.cases-list{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)) ;
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.cases-list div{
+    background: #7fffd456;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius:15px ;
+    transition:background 0.5s, transform 0.5s;
+
+}
+.cases-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.cases-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.cases-list div a{
+    text-decoration: none;
+    color:#fff;
+    font-size:12px ;
+    margin-top:20px ;
+    display: inline-block;
+}
+.cases-list div:hover{
+    background: #7fffd421;
+    transform: translateY(-10px);
+}
+
+/*--------------------CSS for small screens-------------*/
+nav .fas{
+    display:none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/tempBackground.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }nav .fas{
+        display:block;
+        font-size: 25px;
+    }
+    nav ul{
+        background:#7fffd4 ;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition:right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .howIwork-col-1, .howIwork-col-2{
+        flex-basis: 100%;
+    }
+    .howIwork-col-1{
+        margin-bottom: 30px;
+    }
+    .howIwork-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left-col,.contact-right-col{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+    #msg{
+        color: greenyellow;
+        margin-top: -40px;
+        display: block;
+    }
+}
