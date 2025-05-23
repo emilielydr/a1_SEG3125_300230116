@@ -68,7 +68,11 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 .header-text span{
-    color: #0084ff;
+    color: #192f52;
+}
+
+.intro-color{
+    color: #192f52;
 }
 p {
     margin-bottom: 20px; /* Adjust as needed */
