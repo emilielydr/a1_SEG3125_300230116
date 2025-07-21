@@ -160,6 +160,25 @@ a:hover {
     box-shadow: 0 0 8px rgba(0,0,0,0.15);
     display: block;
 }
+.case-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.case-link > div {
+    background: #7fffd456;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 15px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.case-link > div:hover {
+    background: #7fffd421;
+    transform: translateY(-10px);
+}
 
 
 /*--------------------CSS for small screens-------------*/
